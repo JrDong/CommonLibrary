@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--自定义环形图属性-->
+    <declare-styleable name="CircleView">
+        <attr name="circlePadding" format="dimension" />
+        <attr name="circleWidth" format="dimension" />
+        <attr name="stepTextSize" format="dimension" />
+        <attr name="topTextSize" format="dimension" />
+        <attr name="targetTextSize" format="dimension" />
+        <attr name="backCircleColor" format="color|reference" />
+        <attr name="stepTextColor" format="color|reference" />
+        <attr name="TopTextColor" format="color|reference" />
+        <attr name="targetTextColor" format="color|reference" />
+    </declare-styleable>
+
+
+</resources>

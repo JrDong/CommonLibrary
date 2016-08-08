@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.djr.commonlibrary.refresh.PullToRefreshActivity">
+
+    <com.djr.commonlibrary.refresh.view.PullToRefreshView
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="REFRESH1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:gravity="center"
+                    android:text="REFRESH2" />
+            </LinearLayout>
+        </ScrollView>
+    </com.djr.commonlibrary.refresh.view.PullToRefreshView>
+
+</RelativeLayout>
