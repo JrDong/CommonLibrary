@@ -1,7 +1,8 @@
 package com.djr.commonlibrary.utils;
 
-import android.content.Context;
 import android.widget.Toast;
+
+import com.djr.commonlibrary.CLApplication;
 
 /**
  * Toast管理工具类
@@ -9,13 +10,14 @@ import android.widget.Toast;
 public class T {
 
     private static Toast toast = null;
+
     private T() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-    public static void showShort(Context context, CharSequence message) {
+    public static void show(CharSequence message) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, Toast.LENGTH_SHORT);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);
@@ -23,9 +25,9 @@ public class T {
         toast.show();
     }
 
-    public static void showShort(Context context, int message) {
+    public static void show(int message) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, Toast.LENGTH_SHORT);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);
@@ -33,9 +35,9 @@ public class T {
         toast.show();
     }
 
-    public static void showLong(Context context, CharSequence message) {
+    public static void showLong(CharSequence message) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, Toast.LENGTH_LONG);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);
@@ -43,9 +45,9 @@ public class T {
         toast.show();
     }
 
-    public static void showLong(Context context, int message) {
+    public static void showLong(int message) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, Toast.LENGTH_LONG);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, Toast.LENGTH_LONG);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);
@@ -53,19 +55,19 @@ public class T {
         toast.show();
     }
 
-    public static void show(Context context, CharSequence message, int duration) {
+    public static void show(CharSequence message, int duration) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, duration);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, duration);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);
         }
         toast.show();
     }
-    
-    public static void show(Context context, int message, int duration) {
+
+    public static void show(int message, int duration) {
         if (toast == null) {
-            toast = Toast.makeText(context, message, duration);
+            toast = Toast.makeText(CLApplication.getAppContext(), message, duration);
 //			toast.setGravity(Gravity.CENTER, 0, 62);
         } else {
             toast.setText(message);

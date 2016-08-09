@@ -145,7 +145,7 @@ public class StepService extends Service {
 
         if (Build.VERSION.SDK_INT < 18) {
 
-            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this).setSmallIcon(R.mipmap
+            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this).setSmallIcon(R.drawable
                     .ic_launcher)
                     .setContentTitle("CommonLibrary")
                     .setContentText("正在为您计步");
