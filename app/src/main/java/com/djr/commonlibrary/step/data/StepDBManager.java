@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.util.Log;
 
 import com.djr.commonlibrary.CLApplication;
-import com.djr.commonlibrary.UserInfoCenter;
+import com.djr.commonlibrary.main.UserInfoCenter;
 import com.djr.commonlibrary.db.DateBaseHelper;
 import com.djr.commonlibrary.step.StepCountManager;
 import com.djr.commonlibrary.step.StepDBModel;

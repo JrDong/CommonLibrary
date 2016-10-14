@@ -16,6 +16,7 @@
     <color name="grey">#d5d5d5</color>
     <color name="dark_grey">#a0a0a0</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
     <color name="trans_white">#99ffffff</color>
     <color name="trans_light_white">#77ffffff</color>
     <color name="transparent">#00000000</color>
@@ -91,4 +92,16 @@
     <color name="common_btn_normal">@color/ThemeColor</color>
     <color name="common_btn_disabled">#999999</color>
     <color name="common_btn_pressed">#19b48e</color>
+
+
+    <!--六边形 颜色-->
+    <color name="hexagon_base">#626eb6</color>
+    <color name="hexagon_s">#b6f9a0</color>
+    <color name="hexagon_a">#dafcae</color>
+    <color name="hexagon_b">#fbf8a3</color>
+    <color name="hexagon_c">#fed3a0</color>
+    <color name="hexagon_d">#fea7a0</color>
+    <color name="color_theme_blue">#6f80c8</color>
+    <color name="color_transparent">#00000000</color>
+
 </resources>

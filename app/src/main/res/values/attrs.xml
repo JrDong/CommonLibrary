@@ -15,5 +15,11 @@
         <attr name="targetTextColor" format="color|reference" />
     </declare-styleable>
 
-
+    <declare-styleable name="HexagonView">
+        <attr name="sideLength" format="dimension" />
+        <attr name="sideWidth" format="dimension" />
+        <attr name="baseColor" format="color|reference" />
+        <attr name="hexTextSize" format="dimension" />
+        <attr name="hexTextColor" format="color|reference" />
+    </declare-styleable>
 </resources>

@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.djr.commonlibrary.CLApplication;
 import com.djr.commonlibrary.R;
-import com.djr.commonlibrary.UserInfoCenter;
+import com.djr.commonlibrary.main.UserInfoCenter;
 import com.djr.commonlibrary.step.data.StepConstant;
 import com.djr.commonlibrary.step.data.StepCountAdapter;
 import com.djr.commonlibrary.step.data.StepDBManager;

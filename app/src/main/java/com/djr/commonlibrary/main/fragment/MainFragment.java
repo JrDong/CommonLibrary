@@ -1,4 +1,4 @@
-package com.djr.commonlibrary;
+package com.djr.commonlibrary.main.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,9 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.base.adaper.CommonAdapter;
 import com.djr.commonlibrary.base.adaper.ViewHolder;
 import com.djr.commonlibrary.bezier.BezierActivity;
+import com.djr.commonlibrary.main.activity.DateActivity;
+import com.djr.commonlibrary.main.activity.HexagonActivity;
 import com.djr.commonlibrary.refresh.PullToRefreshActivity;
 import com.djr.commonlibrary.step.StepCountActivity;
 
@@ -41,7 +44,8 @@ public class MainFragment extends Fragment {
         mList.add("STEP");
         mList.add("PULL-TO-REFRESH");
         mList.add("BÉZIER");
-
+        mList.add("HEXAGON-VIEW");
+        mList.add("DATE-VIEW");
         MainAdapter adapter = new MainAdapter(getContext(), mList, R.layout.main_item);
         mListView.setAdapter(adapter);
     }
@@ -68,6 +72,12 @@ public class MainFragment extends Fragment {
                             break;
                         case 2:
                             BezierActivity.startActivity(getActivity());
+                            break;
+                        case 3:
+                            HexagonActivity.startActivity(getActivity());
+                            break;
+                        case 4:
+                            DateActivity.startActivity(getActivity());
                             break;
                     }
                 }

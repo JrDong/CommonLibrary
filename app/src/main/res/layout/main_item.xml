@@ -4,7 +4,7 @@
     android:id="@+id/fl_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.djr.commonlibrary.MainActivity">
+    tools:context=".main.activity.MainActivity">
 
     <TextView
         android:id="@+id/tv_item"

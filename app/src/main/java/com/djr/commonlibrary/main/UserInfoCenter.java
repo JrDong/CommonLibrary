@@ -1,4 +1,4 @@
-package com.djr.commonlibrary;
+package com.djr.commonlibrary.main;
 
 /**
  * Created by DongJr on 2016/8/5.

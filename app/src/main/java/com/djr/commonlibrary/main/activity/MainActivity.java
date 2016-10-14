@@ -1,4 +1,4 @@
-package com.djr.commonlibrary;
+package com.djr.commonlibrary.main.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.djr.commonlibrary.main.fragment.MainFragment;
+import com.djr.commonlibrary.R;
 import com.zbar.lib.CaptureActivity;
 
 public class MainActivity extends AppCompatActivity {
