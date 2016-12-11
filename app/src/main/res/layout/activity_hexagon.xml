@@ -11,19 +11,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.djr.commonlibrary.view.HexagonView
+        <com.djr.commonlibrary.view.hexagon.HexagonView
             android:id="@+id/hexagon1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
            />
 
-        <com.djr.commonlibrary.view.HexagonView
+        <com.djr.commonlibrary.view.hexagon.HexagonView
             android:id="@+id/hexagon2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
           />
 
-        <com.djr.commonlibrary.view.HexagonView
+        <com.djr.commonlibrary.view.hexagon.HexagonView
             android:id="@+id/hexagon3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,19 +37,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.djr.commonlibrary.view.HexagonCheckBox
+        <com.djr.commonlibrary.view.hexagon.HexagonCheckBox
             android:id="@+id/HexagonCheckBox1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <com.djr.commonlibrary.view.HexagonCheckBox
+        <com.djr.commonlibrary.view.hexagon.HexagonCheckBox
             android:id="@+id/HexagonCheckBox2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <com.djr.commonlibrary.view.HexagonCheckBox
+        <com.djr.commonlibrary.view.hexagon.HexagonCheckBox
             android:id="@+id/HexagonCheckBox3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

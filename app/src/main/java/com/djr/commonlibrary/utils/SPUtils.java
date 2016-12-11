@@ -3,7 +3,7 @@ package com.djr.commonlibrary.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

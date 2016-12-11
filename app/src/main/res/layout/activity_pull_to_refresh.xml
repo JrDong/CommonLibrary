@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.djr.commonlibrary.refresh.PullToRefreshActivity">
+    tools:context=".view.refresh.PullToRefreshActivity">
 
-    <com.djr.commonlibrary.refresh.view.PullToRefreshView
+    <com.djr.commonlibrary.view.refresh.view.PullToRefreshView
         android:id="@+id/refresh_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -34,6 +34,6 @@
                     android:text="REFRESH2" />
             </LinearLayout>
         </ScrollView>
-    </com.djr.commonlibrary.refresh.view.PullToRefreshView>
+    </com.djr.commonlibrary.view.refresh.view.PullToRefreshView>
 
 </RelativeLayout>

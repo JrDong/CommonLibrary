@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 import com.djr.commonlibrary.step.StepService;
 
 

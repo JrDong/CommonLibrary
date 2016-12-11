@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:text="移动第二个控制点" />
 
-    <com.djr.commonlibrary.bezier.BezierView
+    <com.djr.commonlibrary.view.bezier.BezierView
         android:id="@+id/bezier1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

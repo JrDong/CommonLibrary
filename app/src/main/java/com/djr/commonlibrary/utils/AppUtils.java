@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 
 import java.util.ArrayList;
 import java.util.List;

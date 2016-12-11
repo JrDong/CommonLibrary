@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 import com.djr.commonlibrary.step.StepService;
 
 

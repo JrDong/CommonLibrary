@@ -21,7 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.main.UserInfoCenter;
 import com.djr.commonlibrary.step.data.StepConstant;

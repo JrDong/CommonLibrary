@@ -1,9 +1,11 @@
-package com.djr.commonlibrary.view;
+package com.djr.commonlibrary.view.date;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import com.djr.commonlibrary.view.date.DateView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

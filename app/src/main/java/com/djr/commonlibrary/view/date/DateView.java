@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.view;
+package com.djr.commonlibrary.view.date;
 
 import android.content.Context;
 import android.graphics.Canvas;

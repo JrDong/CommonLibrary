@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.refresh.view;
+package com.djr.commonlibrary.view.refresh.view;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

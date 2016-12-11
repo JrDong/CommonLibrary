@@ -1,4 +1,4 @@
-package com.djr.commonlibrary;
+package com.djr.commonlibrary.base;
 
 import android.app.Application;
 import android.content.Context;

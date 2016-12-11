@@ -36,7 +36,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 import com.djr.commonlibrary.main.activity.MainActivity;
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.step.data.StepDBManager;

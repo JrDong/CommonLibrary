@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.djr.commonlibrary.main.activity.DateActivity">
-    <com.djr.commonlibrary.view.WeekView
+    <com.djr.commonlibrary.view.date.WeekView
         android:id="@+id/weekView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
 
-    </com.djr.commonlibrary.view.WeekView>
+    </com.djr.commonlibrary.view.date.WeekView>
 </RelativeLayout>

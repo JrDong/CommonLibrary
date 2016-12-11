@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.utils.T;
-import com.djr.commonlibrary.view.WeekView;
+import com.djr.commonlibrary.view.date.WeekView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

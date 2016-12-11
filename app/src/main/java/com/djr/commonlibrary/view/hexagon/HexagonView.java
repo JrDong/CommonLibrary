@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.view;
+package com.djr.commonlibrary.view.hexagon;
 
 import android.content.Context;
 import android.content.res.TypedArray;

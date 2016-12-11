@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.djr.commonlibrary.bezier.HeartBezierView
+    <com.djr.commonlibrary.view.bezier.HeartBezierView
         android:id="@+id/bezier"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

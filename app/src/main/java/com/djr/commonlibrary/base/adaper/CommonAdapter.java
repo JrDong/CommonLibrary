@@ -8,6 +8,9 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
+/**
+ * create by zhanghongyang
+ */
 public abstract class CommonAdapter<T> extends BaseAdapter
 {
 	protected Context mContext;

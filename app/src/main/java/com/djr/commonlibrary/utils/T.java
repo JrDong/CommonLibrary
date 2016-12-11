@@ -2,7 +2,7 @@ package com.djr.commonlibrary.utils;
 
 import android.widget.Toast;
 
-import com.djr.commonlibrary.CLApplication;
+import com.djr.commonlibrary.base.CLApplication;
 
 /**
  * Toast管理工具类

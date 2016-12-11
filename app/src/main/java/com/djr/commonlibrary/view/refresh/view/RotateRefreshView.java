@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.refresh.view;
+package com.djr.commonlibrary.view.refresh.view;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;

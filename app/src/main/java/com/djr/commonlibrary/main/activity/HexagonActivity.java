@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.djr.commonlibrary.R;
-import com.djr.commonlibrary.view.HexagonCheckBox;
-import com.djr.commonlibrary.view.HexagonView;
+import com.djr.commonlibrary.view.hexagon.HexagonCheckBox;
+import com.djr.commonlibrary.view.hexagon.HexagonView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

@@ -12,10 +12,11 @@ import android.widget.ListView;
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.base.adaper.CommonAdapter;
 import com.djr.commonlibrary.base.adaper.ViewHolder;
-import com.djr.commonlibrary.bezier.BezierActivity;
+import com.djr.commonlibrary.picture.activity.PictureDemoActivity;
+import com.djr.commonlibrary.view.bezier.BezierActivity;
 import com.djr.commonlibrary.main.activity.DateActivity;
 import com.djr.commonlibrary.main.activity.HexagonActivity;
-import com.djr.commonlibrary.refresh.PullToRefreshActivity;
+import com.djr.commonlibrary.view.refresh.PullToRefreshActivity;
 import com.djr.commonlibrary.step.StepCountActivity;
 
 import java.util.ArrayList;
@@ -46,6 +47,7 @@ public class MainFragment extends Fragment {
         mList.add("BÉZIER");
         mList.add("HEXAGON-VIEW");
         mList.add("DATE-VIEW");
+        mList.add("PICTURE");
         MainAdapter adapter = new MainAdapter(getContext(), mList, R.layout.main_item);
         mListView.setAdapter(adapter);
     }
@@ -78,6 +80,10 @@ public class MainFragment extends Fragment {
                             break;
                         case 4:
                             DateActivity.startActivity(getActivity());
+                            break;
+                        case 5:
+                            PictureDemoActivity.startActivity(getActivity());
+                        default:
                             break;
                     }
                 }

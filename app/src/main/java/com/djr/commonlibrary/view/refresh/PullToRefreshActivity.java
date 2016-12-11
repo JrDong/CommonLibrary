@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.refresh;
+package com.djr.commonlibrary.view.refresh;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.djr.commonlibrary.R;
-import com.djr.commonlibrary.refresh.view.PullToRefreshView;
+import com.djr.commonlibrary.view.refresh.view.PullToRefreshView;
 
 public class PullToRefreshActivity extends AppCompatActivity {
 

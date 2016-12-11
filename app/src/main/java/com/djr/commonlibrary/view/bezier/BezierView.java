@@ -1,4 +1,4 @@
-package com.djr.commonlibrary.bezier;
+package com.djr.commonlibrary.view.bezier;
 
 import android.annotation.TargetApi;
 import android.content.Context;
