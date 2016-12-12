@@ -26,4 +26,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:design:23.+'
     compile project(':qRLibrary')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }

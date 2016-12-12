@@ -1,6 +1,9 @@
 package com.djr.commonlibrary.utils;
 
+import android.os.Environment;
+
 import java.io.File;
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 /**
@@ -14,7 +17,6 @@ public class FileUtils {
      * 计算某一file的大小，单位为MB
      *
      * @param file 文件
-     *
      * @return 文件或文件夹大小，单位为byte
      */
     public static long getSize(File file) {
@@ -38,7 +40,6 @@ public class FileUtils {
      * 计算某一路径下的文件大小
      *
      * @param path 某文件的绝对路径
-     *
      * @return 文件大小，单位为Byte
      */
     public static long getSize(String path) {
@@ -50,7 +51,6 @@ public class FileUtils {
      * 得到某一文件的大小字符串
      *
      * @param file 文件
-     *
      * @return 大小字符串
      */
     public static String getSizeString(File file) {
@@ -108,5 +108,23 @@ public class FileUtils {
     public static boolean isLocalExistFile(String dir, String fileName) {
         File f = new File(dir + fileName);
         return f.exists() && !f.isDirectory();
+    }
+
+    public static File getFile(String fileName) {
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+            File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()
+                    + File.separator + "commonlibrary");
+            if (!file.exists()) {
+                file.mkdir();
+            }
+            File tempFile = new File(file, fileName);
+            try {
+                tempFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return tempFile;
+        }
+        return null;
     }
 }
