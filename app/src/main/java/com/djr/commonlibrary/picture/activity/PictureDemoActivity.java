@@ -3,7 +3,6 @@ package com.djr.commonlibrary.picture.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -25,6 +24,8 @@ import android.widget.TextView;
 
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.picture.adapter.PictureAdapter;
+import com.djr.commonlibrary.utils.BitmapUtil;
+import com.djr.commonlibrary.utils.DensityUtils;
 import com.djr.commonlibrary.utils.FileUtils;
 
 import java.util.ArrayList;
@@ -77,8 +78,6 @@ public class PictureDemoActivity extends AppCompatActivity implements View.OnCli
                 return false;
             }
         });
-
-
     }
 
     @Override
@@ -144,7 +143,7 @@ public class PictureDemoActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void addBitmap(Bitmap bitmap) {
-        mList.clear();
+//        mList.clear();
         mList.add(bitmap);
         if (mAdapter == null) {
             mAdapter = new PictureAdapter(this, mList);
@@ -161,14 +160,28 @@ public class PictureDemoActivity extends AppCompatActivity implements View.OnCli
         switch (requestCode) {
             case TAKE_PHOTO_REQUEST_CODE:
                 if (resultCode == RESULT_OK) {
-                    Bitmap bmp = BitmapFactory.decodeFile(FileUtils.getFile(FILE_PATH).getPath());
+//                    Bitmap bmp = BitmapFactory.decodeFile(FileUtils.getFile(FILE_PATH).getPath());
+                    Bitmap bmp = BitmapUtil.getScaleBitmap(
+                            FileUtils.getFile(FILE_PATH).getPath(),
+                            DensityUtils.dp2px(120), DensityUtils.dp2px(120));
+
                     addBitmap(bmp);
                 }
                 break;
             case ALBUM_REQUEST_CODE:
                 if (resultCode == RESULT_OK) {
-
-
+                    Uri uri = data.getData();
+//                    try {
+//                        Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
+//                        Log.e("bitmap", bitmap.getByteCount() + "=========");
+//                        addBitmap(bitmap);
+//                    } catch (FileNotFoundException e) {
+//                        e.printStackTrace();
+//                    }
+                    Bitmap bitmap = BitmapUtil.getScaleBitmap(this, uri,
+                            DensityUtils.dp2px(120), DensityUtils.dp2px(120));
+                    Log.e("bitmap",bitmap.getByteCount()+"=========");
+                    addBitmap(bitmap);
 
                 }
                 break;

@@ -12,6 +12,8 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.view.Display;
+import android.view.WindowManager;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -226,9 +228,9 @@ public class BitmapUtil {
         }
         return degree;
     }
+
     //使用Bitmap加Matrix来缩放
-    public static Bitmap resizeImage(Bitmap bitmap, int w, int h)
-    {
+    public static Bitmap resizeImage(Bitmap bitmap, int w, int h) {
         Bitmap BitmapOrg = bitmap;
         int width = BitmapOrg.getWidth();
         int height = BitmapOrg.getHeight();
@@ -245,5 +247,126 @@ public class BitmapUtil {
         Bitmap resizedBitmap = Bitmap.createBitmap(BitmapOrg, 0, 0, width,
                 height, matrix, true);
         return resizedBitmap;
+    }
+
+    /**
+     * 通过文件路径 得到适配屏幕宽高的bitmap
+     */
+    public static Bitmap getScaleBitmap(Context context, String filePath) {
+
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        int screenWidth = display.getWidth();
+        int screenHeight = display.getHeight();
+
+        return getScaleBitmap(filePath, screenWidth, screenHeight);
+    }
+
+    /**
+     * 通过文件路径得到适应宽高的bitmap
+     *
+     * @param filePath 文件路径
+     * @param width    需要适配的宽度
+     * @param height   需要适配的高度
+     * @return 适配后的bitmap
+     */
+    public static Bitmap getScaleBitmap(String filePath, int width, int height) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+
+        options.inJustDecodeBounds = true;
+
+        BitmapFactory.decodeFile(filePath, options);
+
+        options.inSampleSize = calculateInSampleSize(options, width, height);
+        options.inJustDecodeBounds = false;
+
+        return BitmapFactory.decodeFile(filePath, options);
+    }
+
+    /**
+     * 得到适配屏幕的bitmap
+     */
+    public static Bitmap getScaleBitmap(Context context, Uri uri) {
+
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        int screenWidth = display.getWidth();
+        int screenHeight = display.getHeight();
+
+        return getScaleBitmap(context, uri, screenWidth, screenHeight);
+    }
+
+    /**
+     * 通过Uri 得到适配宽高的Bitmap
+     * <p>
+     * 需要get两次InputStream是因为,第一次取图片尺寸的时候is这个InputStream被使用过了，
+     * 再真正取图片的时候又使用了这个InputStream，此时流的起始位置已经被移动过了
+     *
+     * @param width  需适应的宽度
+     * @param height 需适应的高度
+     */
+    public static Bitmap getScaleBitmap(Context context, Uri uri, int width, int height) {
+        BitmapFactory.Options options = new BitmapFactory.Options();
+
+        options.inJustDecodeBounds = true;
+
+        Bitmap bitmap = null;
+        InputStream is1 = null;
+        InputStream is2 = null;
+        try {
+            is1 = context.getContentResolver().openInputStream(uri);
+            BitmapFactory.decodeStream(is1
+                    , null, options);
+            options.inSampleSize = calculateInSampleSize(options, width, height);
+            options.inJustDecodeBounds = false;
+            is2 = context.getContentResolver().openInputStream(uri);
+            bitmap = BitmapFactory.decodeStream(is2
+                    , null, options);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (is1 != null) {
+                try {
+                    is1.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (is2 != null) {
+                try {
+                    is2.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return bitmap;
+    }
+
+    private static int calculateInSampleSize(
+            BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                //设置inSampleSize为2的幂是因为解码器最终还是会对非2的幂的数进行向下处理，
+                // 将inSampleSize进行四舍五入,获取到最接近2的幂的数。详情参考inSampleSize的文档。
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
     }
 }
