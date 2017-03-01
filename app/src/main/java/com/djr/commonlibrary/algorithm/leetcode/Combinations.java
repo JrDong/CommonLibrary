@@ -45,7 +45,20 @@ public class Combinations {
         }
     }
 
+    public static void main(String[] args){
+        Combinations combinations = new Combinations();
+        ArrayList<ArrayList<Integer>> combine = combinations.combine(3, 2);
 
+        for (ArrayList<Integer> item : combine){
+
+            for (Integer integer : item){
+                System.out.print(integer + "");
+            }
+
+            System.out.println();
+        }
+
+    }
 
 
 }
