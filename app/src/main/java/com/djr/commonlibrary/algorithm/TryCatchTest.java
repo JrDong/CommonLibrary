@@ -7,7 +7,7 @@ package com.djr.commonlibrary.algorithm;
 public class TryCatchTest {
 
     public int finallyReturn(){
-        int i = 1;
+        int i;
         try {
             i = 1;
             return returnWithSout("try",i);
