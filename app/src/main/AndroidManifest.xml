@@ -68,6 +68,8 @@
                   android:screenOrientation="portrait"/>
         <activity android:name=".picture.activity.PictureDemoActivity"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".dou.DouYinActivity"
+                  android:screenOrientation="portrait"/>
 
     </application>
 

@@ -22,4 +22,11 @@
         <attr name="hexTextSize" format="dimension" />
         <attr name="hexTextColor" format="color|reference" />
     </declare-styleable>
+
+    <declare-styleable name="TwinkleHeadView">
+        <attr name="twinkle_head_size" format="dimension"/>
+        <attr name="twinkle_color" format="color|reference"/>
+        <attr name="twinkle_end_color" format="color|reference"/>
+        <attr name="twinkle_circle_width" format="dimension"/>
+    </declare-styleable>
 </resources>

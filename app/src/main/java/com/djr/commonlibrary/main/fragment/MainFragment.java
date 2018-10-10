@@ -12,6 +12,7 @@ import android.widget.ListView;
 import com.djr.commonlibrary.R;
 import com.djr.commonlibrary.base.adaper.CommonAdapter;
 import com.djr.commonlibrary.base.adaper.ViewHolder;
+import com.djr.commonlibrary.dou.DouYinActivity;
 import com.djr.commonlibrary.picture.activity.PictureDemoActivity;
 import com.djr.commonlibrary.view.bezier.BezierActivity;
 import com.djr.commonlibrary.main.activity.DateActivity;
@@ -48,6 +49,7 @@ public class MainFragment extends Fragment {
         mList.add("HEXAGON-VIEW");
         mList.add("DATE-VIEW");
         mList.add("PICTURE");
+        mList.add("DOUYIN");
         MainAdapter adapter = new MainAdapter(getContext(), mList, R.layout.main_item);
         mListView.setAdapter(adapter);
     }
@@ -83,6 +85,10 @@ public class MainFragment extends Fragment {
                             break;
                         case 5:
                             PictureDemoActivity.startActivity(getActivity());
+                            break;
+                        case 6:
+                            DouYinActivity.startActivity(getActivity());
+                            break;
                         default:
                             break;
                     }

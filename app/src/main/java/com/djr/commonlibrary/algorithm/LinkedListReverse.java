@@ -17,7 +17,7 @@ public class LinkedListReverse {
     public static void main(String[] args) {
         print(initNode(3));
         print(reverseByRecur(initNode(3)));
-        print(reverse(initNode(3)));
+        print(reverse(initNode(5)));
     }
 
     public static Node reverse(Node head) {
